@@ -197,6 +197,25 @@ public class PersonalInfoManager extends Application {
         System.out.println(combined);
     }
 
+    public boolean isValidPhone(String phone){
+        String[] arr = {"0","1","2","3","4","5","6","7","8","9", "-"};
+        for(int i = 0; i < phone.length(); i++){
+            boolean foundYa = false;
+            for(int j = 0; j < arr.length; j++){
+                System.out.println(phone.substring(i,i+1));
+                System.out.println(arr[j]);
+                if(phone.substring(i,i+1).equals(arr[j])){
+                    foundYa = true;
+                }
+            }
+            if(foundYa == false){
+                return false;
+            }
+        }
+        //jkjkjkjjkkjkkkjr
+        return true;
+    }
+
     public void Clear(){
 
         TextField boo = (TextField) (grid.getChildren().get(1));
