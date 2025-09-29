@@ -193,7 +193,14 @@ public class PersonalInfoManager extends Application {
         TextField hello = (TextField) (grid.getChildren().get(5));
         email = hello.getText();
 
-        combined = name + ", "+ phone + ", " + email;
+
+        System.out.println(isValidPhone(phone));
+        if(phone.contains("@") && isValidPhone(email)==true){
+            combined += name + ", "+ phone + ", " + email;
+        }
+
+
+
         System.out.println(combined);
     }
 
