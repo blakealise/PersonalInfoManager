@@ -240,11 +240,23 @@ public class PersonalInfoManager extends Application {
     public void Print(){
         ArrayList<String> contact = new ArrayList<>();
         contact.add(combined);
-        combined = "";
         TextField printed = new TextField(contact.getLast());
         box.getChildren().addAll(printed);
-
     }
+
+    //The biggest issue here is that while the buttons are performing actions, the keyboard isn't!
+    // The Escape key should be calling your Clear() method and the Enter key should be calling your createContact method.
+    // I also didn't see the method reference/anonymous class handling implementation of methods.
+
+    public void HandleButton(String buttonText){
+        switch(buttonText){
+            case"Escape":
+                Clear();
+                break;
+        }
+    }
+
+
     private Button printContact() {
         // Handle adding a contact
         String text = "Print Contact";
