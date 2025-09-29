@@ -73,7 +73,9 @@ public class PersonalInfoManager extends Application {
 
                 }
                 if(j == 1){
-                    TextField imCooked = new TextField(texts[i][j]);
+                    TextField imCooked = new TextField();
+                    imCooked.setPromptText(texts[i][j]);
+
                     grid.add( imCooked , i, j );
                 }
 
