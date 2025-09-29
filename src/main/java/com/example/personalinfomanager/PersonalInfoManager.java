@@ -27,7 +27,7 @@ public class PersonalInfoManager extends Application {
     private TextField display;
     private List<String> contacts = new ArrayList<>();
     GridPane grid = new GridPane();
-    String combined;
+    String combined = "";
     VBox box = new VBox();
     HBox hBox = new HBox(64);
     TextField name1 = new TextField();
